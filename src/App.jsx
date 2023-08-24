@@ -1,35 +1,26 @@
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
-import { ContactIndex } from "./pages/ContactIndex";
-import About from "./cmps/About/About";
 import AppHeader from "./cmps/AppHeader";
-import { ContactDetails } from "./pages/ContactDetails";
-import Team from "./cmps/About/Team";
-import Vision from "./cmps/About/Vision";
-import ContactEdit from "./pages/ContactEdit";
 import "./assets/scss/global.scss";
-import { Charts } from "./pages/Charts";
+import Teams from "./pages/Teams";
+import Players from "./pages/Players";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <Router>
-      <section>
+      <section className="main-layout">
         <AppHeader />
-        <main className="container">
+
+        <main>
           <Routes>
-            <Route path="/" element={<ContactIndex />} />
-            <Route path="/contact/:id" element={<ContactDetails />} />
-            <Route path="/about" element={<About />}>
-              <Route path="team" element={<Team />} />
-              <Route path="vision" element={<Vision />} />
-              <Route />
-            </Route>
-            <Route path="/charts" element={<Charts />} />
-            <Route path="contact/edit/:id?" element={<ContactEdit />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/teams" element={<Teams />} />
+            <Route path="/players" element={<Players />} />
           </Routes>
         </main>
 
         <footer>
-          <section className="container">CoffeeRights 2023 &copy;</section>
+          <section>CoffeeRights 2023 &copy;</section>
         </footer>
       </section>
     </Router>

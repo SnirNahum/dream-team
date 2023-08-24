@@ -3,14 +3,12 @@ import {
   compose,
   legacy_createStore as createStore,
 } from "redux";
-import { contactReducer } from "./reducers/contact.reducer";
-import { userReducer } from "./reducers/user.reducer";
+import { fplReducer } from "./reducers/fpl.reducer";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-  contactModule: contactReducer,
-  userModule: userReducer,
+  fplModule: fplReducer,
 });
 
 export const store = createStore(rootReducer, composeEnhancers());
