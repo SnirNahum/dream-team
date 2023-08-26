@@ -81,11 +81,9 @@ function PlayersList() {
   const isPlayerListEmpty = players?.length === 0;
 
   return (
-    <div>
-      <div className="global-filter">
-        <span>Search: </span>
-        <input value={globalFilter} onChange={handleChange} />
-      </div>
+    <div className="global-filter">
+      <span>Search: </span>
+      <input value={globalFilter} onChange={handleChange} />
       {isPlayerListEmpty ? (
         <div>
           <Skeleton count={10} />

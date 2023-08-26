@@ -1,17 +1,3 @@
-.main-layout {
-  display: grid;
-  grid-template-columns: 200px 1fr 200px;
-
-  > * {
-    grid-column: 2;
-    align-items: center;
-    justify-items: center;
-
-    &.full {
-      grid-column: 1 /-1;
-    }
-  }
-}
 .card-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(150px, 1fr));

@@ -45,7 +45,7 @@ function saveToStorage(key, val) {
   localStorage[key] = JSON.stringify(val);
 }
 
-export const elementTypes = {
+export const playerPositions = {
   1: "dashboard-gk",
   2: "dashboard-def",
   3: "dashboard-mid",

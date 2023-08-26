@@ -25,12 +25,11 @@ export async function loadGeneralInfo() {
     dreamTeamPlayers.forEach((player) => {
       categorizedPlayers[player.element_type].push(player);
     });
-
     const action = {
       type: SET_GENERALINFO,
       players,
       teams,
-      dreamTeamPlayers,
+      dreamTeamPlayers: categorizedPlayers,
     };
     store.dispatch(action);
   } catch (error) {

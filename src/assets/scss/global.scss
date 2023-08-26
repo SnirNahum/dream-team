@@ -20,29 +20,3 @@
 @import "./cmps/AppHeader.scss";
 @import "./cmps/Teams.scss";
 @import "./cmps/DashboardList.scss";
-
-.main-app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-//   main {
-//     flex-grow: 1;
-//     width: 100%;
-//   }
-
-//   > footer {
-//     // background-color: #111;
-//     color: white;
-//   }
-// }
-
-// .team-card {
-//   display: flex;
-//   gap: 10px;
-//   align-items: center;
-//   border: 1px solid #e91e63;
-//   img {
-//     width: 3rem;
-//   }
-// }
