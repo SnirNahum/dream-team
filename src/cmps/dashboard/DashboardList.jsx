@@ -1,25 +1,11 @@
-import React, { useEffect, useState } from "react";
-export default function DashboardList({ players }) {
-  const [dreamTeamPlayers, setDreamTeamPlayers] = useState(null);
-
-  useEffect(() => {
-    if (players) {
-      const filteredPlayers = players.filter(
-        (player) => player.in_dreamteam === true
-      );
-      setDreamTeamPlayers(filteredPlayers);
-    }
-  }, [players]);
+import { useEffect, useState } from "react";
+import { elementTypes } from "../../services/utilService";
+export default function DashboardList({ dreamTeamPlayers }) {
+  // do all the logic from the store
 
   if (!dreamTeamPlayers) return <div>Loading...</div>;
 
-  const elementTypes = {
-    1: "dashboard-gk",
-    2: "dashboard-def",
-    3: "dashboard-mid",
-    4: "dashboard-at",
-  };
-
+  //add set state
   const categorizedPlayers = {
     1: [],
     2: [],
@@ -40,6 +26,7 @@ export default function DashboardList({ players }) {
         {Object.keys(categorizedPlayers).map((elementType) => (
           <section key={elementType} className={elementTypes[elementType]}>
             {categorizedPlayers[elementType].map((player) => (
+              //add componenet of Dashboard player
               <div className="dashboard-player" key={player.id}>
                 <img
                   src={`https://resources.premierleague.com/premierleague/photos/players/110x140/p${player.code}.png`}

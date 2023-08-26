@@ -1,6 +1,7 @@
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import AppHeader from "./cmps/AppHeader";
 import "./assets/scss/global.scss";
+import "react-loading-skeleton/dist/skeleton.css";
 import Teams from "./pages/Teams";
 import Players from "./pages/Players";
 import Dashboard from "./pages/Dashboard";

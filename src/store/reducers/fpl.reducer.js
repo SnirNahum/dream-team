@@ -3,6 +3,9 @@ export const SET_FILTER_BY = "SET_FILTER_BY";
 
 const initialState = {
   generalInfo: null,
+  teams: [],
+  players: [],
+  dreamTeamPlayers: [],
   filterBy: {
     name: "",
   },
@@ -13,7 +16,9 @@ export function fplReducer(state = initialState, action = {}) {
     case SET_GENERALINFO:
       return {
         ...state,
-        generalInfo: action.generalInfo,
+        players: action.players,
+        teams: action.teams,
+        dreamTeamPlayers: action.dreamTeamPlayers,
       };
     case SET_FILTER_BY:
       return {
