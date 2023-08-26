@@ -4,8 +4,13 @@ import "./assets/scss/global.scss";
 import Teams from "./pages/Teams";
 import Players from "./pages/Players";
 import Dashboard from "./pages/Dashboard";
+import { loadGeneralInfo } from "./store/actions/generalInfo.actions";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    loadGeneralInfo();
+  }, []);
   return (
     <Router>
       <section className="main-layout">

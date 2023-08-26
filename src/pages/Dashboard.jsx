@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { fplService } from "../services/fplService";
 import { loadGeneralInfo } from "../store/actions/generalInfo.actions";
-import DashboardList from "../cmps/Players/DashboardList";
+import DashboardList from "../cmps/dashboard/DashboardList";
 
 export default function Dashboard() {
   const generalInfo = useSelector((state) => state.fplModule.generalInfo);
